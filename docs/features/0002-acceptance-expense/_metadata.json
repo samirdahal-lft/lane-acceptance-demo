@@ -1,0 +1,7 @@
+{
+  "schema": 1,
+  "lane": {
+    "accepts": "0001-master-expense-tracker"
+  },
+  "ext": {}
+}
