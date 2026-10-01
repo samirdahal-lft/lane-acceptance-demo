@@ -1,6 +1,7 @@
 ---
-approved_by: ""
-approved_at: ""
+approved_by: "Dev Person"
+approved_at: "2026-10-01"
+approved_sha256: "15ee7091127bff5a46bce6d41080b7ea0e42d2566d74dae8959704ffbedb5a22"
 ---
 # Exploration 0002
 > QA's second stamp: the app REALLY behaves as each approved scenario says. Walk every
