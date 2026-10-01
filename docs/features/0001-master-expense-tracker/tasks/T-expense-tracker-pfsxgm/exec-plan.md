@@ -1,26 +1,19 @@
 ---
-approved_by: ""
-approved_at: ""
-# planned_behaviors — machine-read count of RED→GREEN cycles (B-N). Leave empty to let
-# lane infer from B-N labels below; SET it when an AC becomes a regression guard so
-# `lane next` knows the remaining count (frontmatter edits need no re-approval).
-planned_behaviors: ""
+approved_by: "Dev Person"
+approved_at: "2026-10-01"
+planned_behaviors: "3"
+approved_sha256: "015daea21c117aa125955974b210c83cdcd93334c432cfde342a2f859034764f"
 ---
 ## Exec Plan — Task T-expense-tracker-pfsxgm
-> Authored during planning, before any code. ★GATE where this kind signs the plan — run `lane` and read the step: at `approve-plan` a DEV/SA approves via `lane approve` BEFORE any code (lane writes the stamp). When `lane` says there is no plan gate on this kind, this document is drafted and never signed, and the approved spec is what bounds it. Resolve all ambiguities first either way.
-
-**Will build:** (mapped to each AC)
--
-**Approach:** high-level only — NOT implementation prescription
-**Boundaries & mocks:** (from the approved spec's Boundaries section) what's FAKED (network/external services, clock, randomness, filesystem) vs REAL. Each fake = an injected port. Boundaries non-empty ⇒ name the smoke AC that hits the real one in a realistic environment.
--
-**Behaviors (TDD order):** B-1 first (tracer bullet), then B-2, B-3 … ; include the `e2e` behavior
--
+**Will build:**
+- AC-1 amount refused · AC-2 category refused · AC-3 the add form through the real server
+**Approach:** pure rules in expense.js; server.js renders the page and handles POST /expenses
+**Boundaries & mocks:**
+- file system: a temp EXPENSES_FILE per test; the server is real, on a random port
+**Behaviors (TDD order):**
+- B-1 AC-1 (tracer bullet) · B-2 AC-2 · B-3 AC-3 (e2e through the real server)
 **PR will contain:**
--
-**Open questions / ambiguities:** (MUST be resolved before execution)
--
-**Path:** L (lean, default) | R (rich)
-**Escalation signals hit (≥2 → R):** ambiguities≥3 · blast-radius≥3 · security · amendments≥2 · prior-fail · self-flag
-**If overriding R→L:** risk acknowledged here + SA co-signs Verification.
-- [ ] Refactor pass done (on green; tests unchanged) — before PR
+- expense.js, server.js, tests/T-expense-tracker-pfsxgm/
+**Open questions / ambiguities:**
+- none
+**Path:** L
