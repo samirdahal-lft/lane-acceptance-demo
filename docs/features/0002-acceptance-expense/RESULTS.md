@@ -1,6 +1,7 @@
 ---
-approved_by: ""
-approved_at: ""
+approved_by: "Dev Person"
+approved_at: "2026-10-01"
+approved_sha256: "e49e1665509e2293a4d08a1b82e7dd2bf37b95d383b9667bdcb9acc5f9d914ab"
 ---
 # Results 0002
 > QA's third stamp: every approved scenario has its e2e test on this branch. One line per
