@@ -1,33 +1,28 @@
 ---
-approved_by: ""
-approved_at: ""
+approved_by: "Dev Person"
+approved_at: "2026-10-01"
+approved_sha256: "f922643f7353ff862f9f80104274512c13a60fc4d789c37aebc78ab5912989ac"
 ---
-# Briefing 0001 — <title>
-> Scratch pad — flesh the idea out before committing to a PRD.
-> ★ Gate: stakeholder (PM / SA / client) approves before any PRD work begins.
-> Approve by running `lane approve` — lane writes the stamp after your y/N confirm.
-> Do NOT edit the frontmatter fields by hand; a hand-typed stamp does not count.
+# Briefing 0001 — Expense tracker
 
 ## Why
-<!-- What problem does this solve? For whom? Why now? -->
+People who want to watch their spending have nowhere simple to write it down. They want to
+add what they spent and see this month's total, without signing up for anything.
 
 ## Hypothesis
-<!-- What we think we're building — two to three sentences. Not a spec. -->
+A single web page with a form (amount + category) and a running monthly total is enough to
+start tracking spending.
 
 ## Mocks / references
-<!-- Figma links, wireframes, prior art, anything that helps visualize the idea. -->
--
+- one page: a form at the top (amount, category, Add), the list of expenses, then "Total this month: N"
 
 ## Scope hints
 **Probably in:**
--
+- adding an expense with an amount and a category
+- refusing a bad amount or a missing category, with a message
+- the total for the month
 **Probably out:**
--
+- editing or deleting, budgets, more than one month, accounts
 
 ## Open questions
-<!-- Must be resolved before PRD. Delete each line when answered. -->
--
-
-## Approval
-Run `lane approve` — lane stamps the frontmatter (name, date, content hash) after you confirm.
-Editing this file after approval invalidates the stamp and reopens the gate.
+- none — categories are fixed to Food, Travel, Bills for now
