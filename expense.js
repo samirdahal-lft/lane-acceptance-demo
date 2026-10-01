@@ -4,4 +4,7 @@ function addExpense(list, amount, category) {
   if (!CATEGORIES.includes(category)) throw new Error("Category is required");
   return [...list, { amount, category }];
 }
-module.exports = { CATEGORIES, addExpense };
+function monthlyTotal(list) {
+  return list.reduce((sum, e) => sum + e.amount, 0);
+}
+module.exports = { CATEGORIES, addExpense, monthlyTotal };
