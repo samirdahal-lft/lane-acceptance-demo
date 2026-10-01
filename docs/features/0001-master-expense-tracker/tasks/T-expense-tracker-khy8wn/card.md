@@ -1,3 +1,8 @@
+---
+approved_by: "Dev Person"
+approved_at: "2026-10-01"
+approved_sha256: "c6728a37b90e941fd248d885d146e0b26535aedbf6bad16034b65106d706e620"
+---
 ## Task T-expense-tracker-khy8wn — Monthly total
 **Parent:** story S-0001.02 · feature 0001 (docs/features/0001-master-expense-tracker/ — its BRIEFING.md + PRD.md + TSD.md)
 **Slice:** the total on the page, computed by the rule, with tests
