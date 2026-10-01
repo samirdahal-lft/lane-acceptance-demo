@@ -1,3 +1,8 @@
+---
+approved_by: "Dev Person"
+approved_at: "2026-10-01"
+approved_sha256: "13f1c8bf2e647cefca982479cab540c1df82e817e5fcbaa57565578ed697a4ea"
+---
 ## Task T-expense-tracker-pfsxgm — Add an expense
 **Parent:** story S-0001.01 · feature 0001 (docs/features/0001-master-expense-tracker/ — its BRIEFING.md + PRD.md + TSD.md)
 **Slice:** the add form through the real server, with its validation and tests
