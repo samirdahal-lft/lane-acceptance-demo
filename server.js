@@ -1,6 +1,6 @@
 const http = require("node:http");
 const fs = require("node:fs");
-const { CATEGORIES, addExpense } = require("./expense.js");
+const { CATEGORIES, addExpense, monthlyTotal } = require("./expense.js");
 
 const file = () => process.env.EXPENSES_FILE || "expenses.json";
 const load = () => (fs.existsSync(file()) ? JSON.parse(fs.readFileSync(file(), "utf8")) : []);
@@ -18,6 +18,7 @@ ${error ? `<p data-testid="error" style="color:#a32d2d">${esc(error)}</p>` : ""}
   <button data-testid="add">Add</button>
 </form>
 <ul data-testid="expenses">${rows}</ul>
+<p data-testid="monthly-total">Total this month: ${monthlyTotal(list)}</p>
 </body></html>`;
 }
 
