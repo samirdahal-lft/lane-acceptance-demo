@@ -1,11 +1,10 @@
-## Task T-expense-tracker-khy8wn — <title>
-**Parent:** story S-0001.nn · feature 0001 (docs/features/0001-master-expense-tracker/ — its BRIEFING.md + PRD.md + TSD.md)
-**Slice:** a complete observable behavior end-to-end + tests (full vertical — a disconnected layer = smell)
-**Acceptance criteria:** (tag each `behavior`/`invariant`/`non-functional`/`e2e`; behavior ACs = observable outcome through an interface — NO "calls X / saves to table Y / uses lib Z")
-- [ ] AC-1 [behavior]: <observable outcome through interface>
-**End-to-end AC:** AC-<n> [e2e] — reachable through the running app (required: green component/unit ≠ reachable)
-**Tests:** AC-1  ← ordered; first = tracer bullet
-<!-- exception: Tests: N/A — reason: config | scaffolding | spike | tooling | integration.  Tests: refactor — <what stays green> for behaviour-preserving work (lane proves pass→pass) -->
-**Test scope:** tests/T-expense-tracker-khy8wn/   ← documentation: where this task's OWN tests live. Scope is NOT configured — red/green scope to the changed test files and `verify` derives it from the RED commits (ADR-0002); `review` runs the FULL suite. This line is a human pointer only.
-<!-- approval: written by `lane approve` as frontmatter (approved_by/at/sha256) after a human confirms — never hand-edit -->
+## Task T-expense-tracker-khy8wn — Monthly total
+**Parent:** story S-0001.02 · feature 0001 (docs/features/0001-master-expense-tracker/ — its BRIEFING.md + PRD.md + TSD.md)
+**Slice:** the total on the page, computed by the rule, with tests
+**Acceptance criteria:**
+- [ ] AC-1 [behavior]: the monthly total is the sum of every expense's amount
+- [ ] AC-2 [e2e]: after adding 1000 Bills and 250 Food the page shows "Total this month: 1250"
+**End-to-end AC:** AC-2 [e2e] — reachable through the running app
+**Tests:** AC-1, AC-2
+**Test scope:** tests/T-expense-tracker-khy8wn/
 **Done =** reviewable PR, all tests pass, links to chain. One PR per task (default).
